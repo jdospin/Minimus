@@ -1,69 +1,70 @@
 <!-- Slide Menu-->
 <aside class="side-menu__container" [ngClass]="{'side-menu__container-active': showMenu}" (click)="toggleMenu()">
-  <nav class="slide-menu" [ngClass]="{'slide-menu-active': showMenu}" (click)="$event.stopImmediatePropagation();">
-      <section class="menu-header">
-          <span class="greeting__text">Welcome Back</span>
-          <div class="profile-image__container">
-              <img src="https://avatars3.githubusercontent.com/u/5658460?s=460&v=4" alt="profile-image"
-                   class="profile__image">
-          </div>
-          <div class="account-details">
-              <span class="name__text">Hamed Baatour</span>
-              <span class="email__text">hamedbaatour@gmail.com</span>
-          </div>
-      </section>
-      <section class="menu-body">
+<nav class="slide-menu" [ngClass]="{'slide-menu-active': showMenu}" (click)="$event.stopImmediatePropagation();">
+    <section class="menu-header">
+        <span class="greeting__text">Welcome Back</span>
+        <div class="profile-image__container">
 
-      </section>
-      <section class="menu-footer">
+        </div>
+        <div class="account-details">
+            <span class="name__text">Hamed Baatour</span>
+            <span class="email__text">hamedbaatour@gmail.com</span>
+        </div>
+    </section>
+    <section class="menu-body">
 
-      </section>
-  </nav>
-  </aside>
+    </section>
+    <section class="menu-footer">
 
-  <div class="root__container" >
-      <header [ngClass]="{'main__header-dark': darkModeActive}" class="main__header">
+    </section>
+</nav>
+</aside>
 
-          <div class="left__section">
-            <svg (click)="toggleMenu()" class="hamburger__icon" id="Menu_Burger_Icon">
-                <!-- hamburger icon svg code goes here-->
+<div class="root__container" >
+    <header [ngClass]="{'main__header-dark': darkModeActive}" class="main__header">
+
+        <div class="left__section">
+          <svg (click)="toggleMenu()" class="hamburger__icon" id="Menu_Burger_Icon">
+              <!-- hamburger icon svg code goes here-->
+          </svg>
+
+            <svg class="logo__icon">
+              <!-- logo svg code goes here-->
             </svg>
 
-              <svg class="logo__icon">
-                <!-- logo svg code goes here-->
-              </svg>
+        </div>
 
-          </div>
-
-          <h3 class="date__text">Today</h3>
+        <h3 class="date__text">Today</h3>
 
 
-          <div class="mode-toggle__container">
-              <span class="mode-toggle__text">Light</span>
+        <div class="mode-toggle__container">
+            <span class="mode-toggle__text">Light</span>
 
-              <label class="toggle-button__container">
-                  <input (click)="modeToggleSwitch()" type="checkbox" class="mode-toggle__input" />
-                    <span [ngClass]="{'mode-toggle__bg-checked': darkModeActive}" class="mode-toggle__bg"></span>
-                    <span [ngClass]="{'mode-toggle__circle-checked': darkModeActive}" class="mode-toggle__circle"></span>
-              </label>
+            <label class="toggle-button__container">
+                <input (click)="modeToggleSwitch()" type="checkbox" class="mode-toggle__input" />
+                  <span [ngClass]="{'mode-toggle__bg-checked': darkModeActive}" class="mode-toggle__bg"></span>
+                  <span [ngClass]="{'mode-toggle__circle-checked': darkModeActive}" class="mode-toggle__circle"></span>
+            </label>
 
 
-              <span class="mode-toggle__text">Dark</span>
-          </div>
+            <span class="mode-toggle__text">Dark</span>
+        </div>
 
-      </header>
+    </header>
 
-      <!-- Main Content -->
+    <!-- Main Content -->
+    <h1>Go to:
+      <a href="https://medium.com/@hamedbaatour/build-a-real-world-beautiful-web-app-with-angular-6-a-to-z-ultimate-guide-2018-part-i-e121dd1d55e">Minimus tutorial</a>
+    </h1>
+    <!--<router-outlet></router-outlet>-->
+    <main class="main__container">
+        <div class="main-container__bg" [ngClass]="{'main-container__bg-dark': darkModeActive}"></div>
+        <router-outlet></router-outlet>
+    </main>
 
-      <!--<router-outlet></router-outlet>-->
-      <main class="main__container">
-          <div class="main-container__bg" [ngClass]="{'main-container__bg-dark': darkModeActive}"></div>
-          <router-outlet></router-outlet>
-      </main>
+    <!-- Footer -->
 
-      <!-- Footer -->
-
-      <footer class="main__footer">
-          <small class="copyright__text">Copyright © 2018 Minimus</small>
-      </footer>
-  </div>
+    <footer class="main__footer">
+        <small class="copyright__text">Copyright © 2018 Minimus</small>
+    </footer>
+</div>
